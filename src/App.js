@@ -7,7 +7,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
   return (
-      <div className="App">
+      <div className="Home">
         <header className="App-header">
           <button className="menu-button">
             <FontAwesomeIcon icon={faBars} />
@@ -31,7 +31,7 @@ function App() {
           </div>
           <h2 className="App-subtitle1">Track your progress with us</h2>
         </main>
-        <footer>
+        <footer className="Footer">
           <p>© GDSC Waseda</p>
         </footer>
       </div>

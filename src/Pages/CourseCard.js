@@ -1,17 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./CourseCard.css"; // Import CSS for styling
+import placeHolderPic from "../assets/coursesimage.png";
 
-const CourseCard = ({ id, title, description, imageUrl }) => {
+const CourseCard = ({ id, title, description }) => {
   return (
-    <Link to={`/course/${id}`} className="course-card-link">
-      <button>
-        <div className="course-card">
-          <img src={imageUrl} alt={title} />
-          <h3>{title}</h3>
-          <p>{description}</p>
-        </div>
-      </button>
+    <Link to={`/course/${id}`}>
+      <div className="course-card">
+        <img src={placeHolderPic} alt={title} />
+        <h3>{title}</h3>
+        <p>{description}</p>
+      </div>
     </Link>
   );
 };

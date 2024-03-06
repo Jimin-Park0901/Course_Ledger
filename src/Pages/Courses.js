@@ -4,14 +4,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const courses = [
-  { id: 1, title: "Course 1", description: "Description of Course 1", imageUrl: "image1.jpg" },
-  { id: 2, title: "Course 2", description: "Description of Course 2", imageUrl: "image2.jpg" },
-  { id: 3, title: "Course 3", description: "Description of Course 3", imageUrl: "image3.jpg" },
-  { id: 4, title: "Course 4", description: "Description of Course 4", imageUrl: "image4.jpg" },
-  { id: 5, title: "Course 5", description: "Description of Course 5", imageUrl: "image5.jpg" },
-  { id: 6, title: "Course 6", description: "Description of Course 6", imageUrl: "image6.jpg" },
-  { id: 7, title: "Course 7", description: "Description of Course 7", imageUrl: "image7.jpg" },
-  { id: 8, title: "Course 8", description: "Description of Course 8", imageUrl: "image8.jpg" },
+  { id: 1, title: "Introductory", description: "8/12 completed"},
+  { id: 2, title: "Intermediate", description: "7/10 completed"},
+  { id: 3, title: "Advanced", description: "10/12 completed"},
+  { id: 4, title: "Seminar", description: "4/8 completed"},
+  { id: 5, title: "Language", description: "18/22 completed"},
+  { id: 6, title: "Untitled", description: "0/0 completed"},
 ];
 
 function CourseGrid() {

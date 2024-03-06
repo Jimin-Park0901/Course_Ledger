@@ -5,6 +5,7 @@ import App from './App';
 import LoginPage from './Pages/Login';
 import Welcome from './Pages/Welcome';
 import CourseList from './Pages/Courses';
+import IntroCourse from './Pages/IntroCourse';
 
 import {
   createBrowserRouter,
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
   {
     path: "/courses",
     element: <CourseList/>,
+  },
+  {
+    path: "/course/1",
+    element: <IntroCourse/>,
   },
 ]);
 

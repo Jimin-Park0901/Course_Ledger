@@ -37,7 +37,7 @@ function LoginPage() {
               value={email}
               onChange={handleChange}
             />
-            <Link to={`/welcome/${email}`} className="continue-email-link">
+            <Link to={`/welcome/${email}`}>
               <p className="continue-email-btn">Continue with Email</p>
             </Link>
           </div>
