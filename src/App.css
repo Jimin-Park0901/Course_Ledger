@@ -1,179 +1,145 @@
-/* App.css */
-
-.Home {
-  text-align: center;
-  background-image: url("/src/assets/background.png");
-  background-size: auto;
-  background-position: center; 
-  height: 900px;
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
-.App {
-  text-align: center;
-}
-
-.Footer{
-  color: white
-}
-
-.App-header {
-  padding: 20px;
+.header {
+  background-color: #2a2a72;
   color: white;
+  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.menu-button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  font-size: 1.5rem;
-  color: white;
-  position: relative; /* Added */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
 }
 
-.menu-button:hover .menu-dropdown {
-  display: block;
-}
-
-.menu-dropdown {
-  display: none;
-  position: absolute;
-  top: calc(100% + 10px); /* Adjusted */
-  color: black; /* Changed */
-  padding: 5px 10px;
-  border-radius: 5px;
-  white-space: nowrap;
-  transition: all 0.3s ease; /* Added smooth animation */
-}
-
-.menu-dropdown ul {
+.nav-links {
   list-style: none;
-  padding: 0;
-  margin: 0;
+  display: flex;
+  gap: 20px;
 }
 
-.menu-dropdown li {
-  margin: 20px 0;
-  color:white
+.nav-links li {
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
-.login-button {
-  order: 2; /* To move the login button to the right */
+.nav-links li:hover {
+  color: #ffd700;
 }
 
-.login-button button {
-  background-color: transparent;
+.reservation-container {
+  background: white;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.reservation-form .form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
   color: white;
-  border: 2px solid white;
-  padding: 10px 20px;
-  font-size: 1rem;
+  background-color: #2a2a72;
+  border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-.App-title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row; /* Changed to row */
-  margin-top: 100px;
-  font-family: monospace;
-  color: white;
-}
-.App-title1 {
-  font-size: 6rem;
+.submit-button:hover {
+  background-color: #1d1d56;
 }
 
-.App-title2 {
-  margin-top: 180px;
-  font-size: 6rem;
-}
-
-.App-title3 {
-  font-size: 2rem;
-  font-family: monospace;
-  margin-top: 100px;
-}
-
-.App-title4 {
-  font-size: 2rem;
-  font-family: monospace;
-  margin-top: 200px;
-
-}
-
-.App-title5 {
-  font-size: 2rem;
-  font-family: monospace;
-  margin-top: 100px;
-}
-
-.App-subtitle1 {
-  font-size: 1.2rem;
-  margin-top: -50px;
-  margin-left: 300px;
-  color: white;
-}
-
-.App-subtitle2 {
-  font-size: 1.8rem;
-  font-family: monospace;
-}
-
-.continue-btn {
-  margin-top: 40px;
-  background-color: black;
-  color: white;
-  border: none;
-  padding: 12px 20px;
+.reservation-summary {
+  background: #e6f7ff;
+  margin: 20px auto;
+  padding: 15px;
+  border: 1px solid #b3d8ff;
   border-radius: 10px;
-  width: 230px;
-  cursor: pointer;
+  max-width: 600px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.continue-btn:hover {
-  background-color: #333; /* Darken the button on hover */
+.footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #2a2a72;
+  color: white;
 }
 
-.email-input {
-  background-color: rgb(235, 235, 235);
-  border: none;
-  padding: 12px 20px;
-  border-radius: 10px;
-  width: 190px;
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
-.center-container {
+.header {
+  background-color: #2a2a72;
+  color: white;
+  padding: 10px 20px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
 }
 
-.divider {
-  border: none;
-  border-top: 1px solid black; /* You can adjust the color */
-  margin: 20px 0; /* Adjust the margin as needed */
-  width: 15%;
+.logo {
+  font-size: 24px;
+  font-weight: bold;
 }
 
-.continue-email-btn {
-  color: black;
-  font-size: small;
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
 }
 
-.continue-email-click{
-  color: black;
-  font-size: small;
-  margin-top: 20px;
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-footer {
-  padding: 20px;
-  color: black;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+.nav-links li a:hover {
+  color: #ffd700;
+}
+
+.footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #2a2a72;
+  color: white;
 }
