@@ -1,25 +1,22 @@
 import React, { useState, useEffect } from "react";
-import { FaCalendarAlt, FaUser, FaBed } from "react-icons/fa";
+import { FaCalendarAlt, FaUser } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 import "./Home.css";
 
 import hotelImage1 from './assets/hotel_lobby.jpeg';
-import hotelImage2 from './assets/hotel_outside.jpeg';
 import hotelImage3 from './assets/hotel_inside1.jpeg';
 import hotelImage4 from './assets/hotel_inside2.jpeg';
-
 
 const Home = () => {
   const [checkInDate, setCheckInDate] = useState("");
   const [checkOutDate, setCheckOutDate] = useState("");
   const [guests, setGuests] = useState(1);
-  const [roomType, setRoomType] = useState("Standard");
-  const [reservationDetails, setReservationDetails] = useState(null);
+  const navigate = useNavigate();
 
   // Image Carousel State
   const [currentImage, setCurrentImage] = useState(0);
   const images = [
     hotelImage1,
-    hotelImage2,
     hotelImage3,
     hotelImage4
   ];
@@ -27,10 +24,10 @@ const Home = () => {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentImage((prevImage) => (prevImage + 1) % images.length);
-    }, 10000); // Change image every 3 seconds
+    }, 5000); // Change image every 5 seconds
 
     return () => clearInterval(intervalId); // Clean up the interval on unmount
-  }, []);
+  });
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -40,11 +37,12 @@ const Home = () => {
       return;
     }
 
-    setReservationDetails({
-      checkInDate,
-      checkOutDate,
-      guests,
-      roomType,
+    navigate("/rooms", {
+      state: {
+        checkInDate,
+        checkOutDate,
+        guests,
+      },
     });
   };
 
@@ -95,34 +93,10 @@ const Home = () => {
           />
         </div>
 
-        <div className="form-group">
-          <label>
-            <FaBed /> Room Type
-          </label>
-          <select
-            value={roomType}
-            onChange={(e) => setRoomType(e.target.value)}
-          >
-            <option value="Standard">Standard</option>
-            <option value="Deluxe">Deluxe</option>
-            <option value="Suite">Suite</option>
-          </select>
-        </div>
-
         <button type="submit" className="submit-button">
           Reserve Now
         </button>
       </form>
-
-      {reservationDetails && (
-        <div className="reservation-summary">
-          <h2>Reservation Summary</h2>
-          <p><strong>Check-In Date:</strong> {reservationDetails.checkInDate}</p>
-          <p><strong>Check-Out Date:</strong> {reservationDetails.checkOutDate}</p>
-          <p><strong>Guests:</strong> {reservationDetails.guests}</p>
-          <p><strong>Room Type:</strong> {reservationDetails.roomType}</p>
-        </div>
-      )}
     </div>
   );
 };
