@@ -1,15 +1,44 @@
-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #0056b3;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #2a2a72;
-  }
-  
+.reservation-container {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+.homepage-buttons {
+  margin: 20px;
+}
+
+.home-btn {
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.home-btn:hover {
+  background-color: #0056b3;
+}
+
+input {
+  padding: 10px;
+  margin: 10px 0;
+  width: 250px;
+}
+
+.check-in-btn,
+.check-out-btn {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.check-in-btn:hover,
+.check-out-btn:hover {
+  background-color: #218838;
+}
