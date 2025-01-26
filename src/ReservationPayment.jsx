@@ -37,8 +37,19 @@ const ReservationPayment = () => {
 
   const handlePayment = (event) => {
     event.preventDefault();
-    alert("Reservation confirmed! Thank you for booking with us.");
-    navigate("/"); // Redirect to home or another page after confirmation
+  
+    // Simulate a reservation number and navigate to the confirmation page
+    const reservationNumber = "12345";
+    navigate("/confirmation", {
+      state: {
+        reservationNumber,
+        checkInDate,
+        checkOutDate,
+        guests,
+        roomType,
+        name,
+      },
+    });
   };
 
   return (

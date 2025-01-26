@@ -1,0 +1,77 @@
+.confirmation-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 0vh;
+  background: linear-gradient(135deg, #f7f9fc, #eef2f3);
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+/* Card Styling */
+.confirmation-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  max-width: 500px;
+  text-align: center;
+  width: 100%;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Title Styling */
+.confirmation-card h1 {
+  color: #28a745;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Details Section */
+.reservation-detail {
+  margin-top: 20px;
+  background: #f7f9fc;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: left;
+}
+
+.reservation-detail h2 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.reservation-detail p {
+  font-size: 1rem;
+  color: #555;
+  margin: 5px 0;
+}
+
+/* Button Styling */
+.back-home-button {
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: transparent;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-home-button:hover {
+  color: #0056b3;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

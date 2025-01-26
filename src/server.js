@@ -24,10 +24,11 @@ app.get("/api/reservations/:reservationNumber", (req, res) => {
   );
 
   if (reservation) {
-    res.json({ success: true, roomNumber: reservation.roomNumber });
+    res.status(200).json({ success: true, roomNumber: reservation.roomNumber });
   } else {
-    res.json({ success: false, message: "Reservation not found." });
+    res.status(404).json({ success: false, message: "Reservation not found." });
   }
+  
 });
 
 // Start server
@@ -36,19 +37,18 @@ app.listen(PORT, () => {
 });
 
 app.get("/api/reservations/:reservationNumber", (req, res) => {
-    const { reservationNumber } = req.params;
-    console.log(`Incoming request for reservation: ${reservationNumber}`); // Debugging
-  
-    const reservation = reservations.find(
-      (r) => r.reservationNumber.toLowerCase() === reservationNumber.toLowerCase()
-    );
-  
-    if (reservation) {
-      console.log(`Reservation found: Room number ${reservation.roomNumber}`);
-      res.json({ success: true, roomNumber: reservation.roomNumber });
-    } else {
-      console.log(`Reservation not found for: ${reservationNumber}`);
-      res.json({ success: false, message: "Reservation not found." });
-    }
-  });
-  
+  const { reservationNumber } = req.params;
+  console.log(`Incoming request for reservation: ${reservationNumber}`); // Debugging
+
+  const reservation = reservations.find(
+    (r) => r.reservationNumber.toLowerCase() === reservationNumber.toLowerCase()
+  );
+
+  if (reservation) {
+    console.log(`Reservation found: Room number ${reservation.roomNumber}`);
+    res.json({ success: true, roomNumber: reservation.roomNumber });
+  } else {
+    console.log(`Reservation not found for: ${reservationNumber}`);
+    res.json({ success: false, message: "Reservation not found." });
+  }
+});

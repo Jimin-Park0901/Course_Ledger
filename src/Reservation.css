@@ -1,30 +1,69 @@
 .reservation-container {
-  font-family: Arial, sans-serif;
   text-align: center;
   padding: 20px;
 }
 
-.homepage-buttons {
-  margin: 20px;
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
 }
 
-.home-btn {
-  padding: 10px 20px;
-  margin: 10px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
-.home-btn:hover {
-  background-color: #0056b3;
+.homepage-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card {
+  width: 200px;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .homepage-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}
 input {
   padding: 10px;
-  margin: 10px 0;
   width: 250px;
 }
 
@@ -35,10 +74,35 @@ input {
   color: white;
   border: none;
   border-radius: 5px;
+  font-size: 1rem;
   cursor: pointer;
+  margin-top: 20px;
 }
 
 .check-in-btn:hover,
 .check-out-btn:hover {
   background-color: #218838;
 }
+
+.icon {
+  font-size: 3rem; /* Adjust icon size */
+  color: #000000; /* Icon color */
+  margin-bottom: 10px; /* Spacing between icon and text */
+}
+
+.cancellation-section {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.cancellation-link {
+  font-size: 0.9rem;
+  color: #555;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.cancellation-link:hover {
+  color: #007bff; /* Hover color */
+}
+

@@ -26,7 +26,7 @@ const CheckOutPage = () => {
   return (
     <div className="reservation-container">
       <h1>Check Out</h1>
-      <label>Room Number:</label>
+      <label className="form-group">Room Number:</label>
       <input
         type="text"
         value={roomNumber}

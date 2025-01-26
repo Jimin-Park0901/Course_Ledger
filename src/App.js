@@ -5,6 +5,8 @@ import Rooms from "./Rooms";
 import Reservation from "./Reservation";
 import CheckInPage from "./CheckInPage";
 import CheckOutPage from "./CheckOutPage";
+import Cancellation from "./Cancellation";
+import ConfirmationPage from "./ConfirmationPage";
 import ReservationPayment from "./ReservationPayment";
 import "./App.css";
 
@@ -75,20 +77,13 @@ const App = () => {
 
       <main>
         <Routes>
-          <Route
-            path="/"
-            element={<Home onReservation={handleReservation} />}
-          />
-          <Route
-            path="/rooms"
-            element={<Rooms onSelectRoom={handleRoomSelect} />}
-          />
+          <Route path="/" element={<Home onReservation={handleReservation} />}/>
+          <Route path="/rooms" element={<Rooms onSelectRoom={handleRoomSelect} />}/>
           <Route path="/reservation" element={<Reservation />} />
-          {/* Check-In Page */}
           <Route path="/check-in" element={<CheckInPage />} />
-          {/* Check-Out Page */}
           <Route path="/check-out" element={<CheckOutPage />} />
-
+          <Route path="/cancellation" element={<Cancellation />} />
+          <Route path="/confirmation" element={<ConfirmationPage />} />
           <Route path="/reservation-payment" element={<ReservationPayment />} />
         </Routes>
       </main>

@@ -39,6 +39,7 @@ const CheckInPage = () => {
         setCheckInStatus(data.message);
       }
     } catch (error) {
+      /*"Error: ${error.message}"*/
       setCheckInStatus(`Error: ${error.message}`);
     }
   };
@@ -46,7 +47,7 @@ const CheckInPage = () => {
   return (
     <div className="reservation-container">
       <h1>Check In</h1>
-      <label>Reservation Number:</label>
+      <label className="form-group">Reservation Number:</label>
       <input
         type="text"
         value={reservationNumber}
